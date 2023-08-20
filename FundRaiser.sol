@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: MIT
+//SPDX-License-Identifier: MIT
 pragma solidity ^0.8.10;
 
 contract FundRaiser {
@@ -35,8 +35,15 @@ contract FundRaiser {
         contributers[msg.sender] += msg.value;
     }
 
-    function getBackFund() public {
+    function refund() public payable {
         // for participants/contributors
+
+        require(
+            block.timestamp > deadline && target < address(this).balance,
+            "You can't withdraw funds right now"
+        );
+        require(contributers[msg.sender] >= 100, "You are not the contributer");
+        payable(msg.sender).transfer(contributers[msg.sender]);
     }
 
     function withdrawAmount(uint _amount) public {
