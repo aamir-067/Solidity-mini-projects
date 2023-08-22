@@ -11,7 +11,7 @@ contains `only contracts` (maybe i create frontend in the future)
 
 ### `Note:`
 
-#### Full dapp is uploaded to the public repository `Lottery Dapp` on my github [click here](https://github.com/aamir-067) to visit
+#### Full dapp is uploaded to the public repository `Lottery Dapp` on my github [click here](https://github.com/aamir-067) to visit my github.
 
 ## `2. Ticket.sol`
 
@@ -34,5 +34,9 @@ The reference of the contract is taken from the youtuber `Code Eater` this contr
 
 ### `Notes : `
 
-1. write now the contract is not yet fully written
+1. write now the contract is not yet fully written.
 2. the contract will be completed in next commits soon.
+
+### `In this commit: `
+
+i added the requestAmount and vote for the request function in which the requestAmount is callable only by the manager and the other is only callable by the recipant of the fund.
